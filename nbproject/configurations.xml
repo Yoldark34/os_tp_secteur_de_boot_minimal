@@ -43,7 +43,7 @@
     <conf name="Release" type="3">
       <toolsSet>
         <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>default</compilerSet>
+        <compilerSet>MinGW_ELF|MinGW</compilerSet>
       </toolsSet>
       <compileType>
         <cTool>
