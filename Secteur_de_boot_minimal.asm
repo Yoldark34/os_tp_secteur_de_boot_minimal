@@ -23,6 +23,9 @@ mov SP, 0xFFFF		;le début de la pîle est maintenant à 5FFFF
 	mov SI,G_Ligne
 	call Affiche_Chaine
 
+	mov SI,G_Super_Image
+	call Affiche_Chaine
+
 	mov SI,G_CRLF
 	call Affiche_Chaine
 	call Affiche_Chaine
@@ -70,8 +73,9 @@ Affiche_Chaine_End_Loop_1
 ;===============================================================================
 ; VARIABLES GLOBALES (Rappel DS=CS=0x07c0)
 ;===============================================================================
-	G_Message db "#---texte---#",13,10,0
-	G_Ligne db "yo",13,10,0
+	G_Message db "#---Amorcage du super OS v0.0.00000.000.0.0000.0.0.1---#",13,10,0
+	G_Ligne db "----------------------------------------",13,10,0
+	G_Super_Image db "       .-''''-.",13,10,"      /        \",13,10,"     /_        _\",13,10,"    // \      / \\",13,10,"    |\__\    /__/|",13,10,"     \    ||    /",13,10,"      \        /",13,10,"       \  __  /",13,10,"        '.__.'",13,10,"         |  |",13,10,0
 	G_CRLF db 13,10,0
 ;===============================================================================
 times 510 - ($-$$) db 0x90
